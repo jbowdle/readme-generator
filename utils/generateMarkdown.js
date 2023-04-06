@@ -85,34 +85,41 @@ ${data.description}
 
 ## Table of Contents
 
-## Installation
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [License](#license)
+4. [Contribution Guidelines](#contribution)
+5. [Tests](#tests)
+6. [Questions](#questions)
+
+## Installation <a name="installation"></a>
 To install dependencies, run the following command:
 
 \`\`\`
 ${data.install}
 \`\`\`
 
-## Usage
+## Usage <a name="usage"></a>
 ${data.usage}
 
-## License
+## License  <a name="license"></a>
 ${licenseLink}
 
 ${licenseSection}
 
-## Contribution Guidelines
+## Contribution Guidelines  <a name="contribution"></a>
 ${data.contribution}
 
-## Tests
+## Tests  <a name="tests"></a>
 To run tests, enter the following command:
 
 \`\`\`
 ${data.test}
 \`\`\`
 
-## Questions
-Email: ${data.email}
-GitHub: https://github.com/${data.github}
+## Questions  <a name="questions"></a>
+Email: <${data.email}>
+GitHub: <https://github.com/${data.github}>
 `;
 }
 
