@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// License badge to be displayed at top of README
 function renderLicenseBadge(license) {
   switch (license) {
     case "MIT":
@@ -13,8 +12,7 @@ function renderLicenseBadge(license) {
   }
 }
   
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Creates link to license website
 function renderLicenseLink(license) {
   switch (license) {
     case "MIT":
@@ -28,8 +26,7 @@ function renderLicenseLink(license) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// Creates copyright details section, taken from the copyright websites
 function renderLicenseSection(license, year, copyrightHolder) {
   switch (license) {
     case "MIT":
@@ -71,7 +68,7 @@ function renderLicenseSection(license, year, copyrightHolder) {
   }
 }
 
-// TODO: Create a function to generate markdown for README
+// Generates the markdown text that is then fed to an fs.writeFile function on index.js
 function generateMarkdown(data) {
   const licenseBadge = renderLicenseBadge(data.license);
   const licenseLink = renderLicenseLink(data.license);

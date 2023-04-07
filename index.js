@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
 
-// TODO: Create an array of questions for user input
+// Series of questions to be used by inquirer to generate a README file
 const questions = [
     {
         type: "input",
@@ -64,25 +64,25 @@ const questions = [
     },
 ];
 
-// TODO: Create a function to write README file
 function writeToFile(fileName, data) {
+    // Calls generateMarkdown from generateMarkdown.js to make markdown framework with the data
     const fileFramework = generateMarkdown(data);
 
+    // Writes file using framework
     fs.writeFile(fileName, fileFramework, (err) =>
         err ? console.log(err) : console.log("Markdown generated")
     );
 }
 
-// TODO: Create a function to initialize app
+// initializes program
 function init() {
     inquirer
         .prompt(questions)
         .then((data) => {
-            const fileName = `${data.title}README.md`;
+            const fileName = `./generated-files/${data.title}README.md`;
 
             writeToFile(fileName, data);
         });
 }
 
-// Function call to initialize app
 init();
